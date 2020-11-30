@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <tittle> Login and Register Form</tittle>
+        <link href= "style1.css" rel = "stylesheet"  type = "text/css">
+    </head>
+<body>
+
+
+
+
+
+
+
+    <div class = "tab-content">
+        <div class = "form-box">
+            
+           
+            <div class = "button-box">
+                <div id="btn"></div> <!-- This section is to create a toggle function to swap between register and login-->
+                <button type ="button " class= "toggle-btn" onclick="login()"> Log In </button> 
+                <button type ="button " class= "toggle-btn" onclick="register()"> Register </button>
+            </div>
+            <form  action = "Login.php" method = "POST" id="login" class = "input-group"> <!-- This will redirect to Login.php after user login-->
+                <h4>Welcome Back!</h4>
+                <input type= "text"  name = "username" class="input-field" placeholder="User User Name" required> <!-- Create a user Id  required-->
+                <input type= "password"  name = "password" class="input-field" placeholder="Password" required> <!-- Create a user pass  required-->
+                
+                <label for="Role">Role:</label>
+                <select  type="text" name="role" id="role">
+                    
+                    
+                        <option value="Support">Support Admin</option>
+                        <option value="Finance">Finance Admin</option>
+                        <option value="Sales">Sales Admin</option>
+                        <option value="HR">HR Admin</option>
+                        <option value= "Tech"> Tech Admin</option>
+                      </select>
+
+                <a ><input type="submit" class = "submit-btn" value = "Login"></a>
+               
+               
+               
+            </form>
+            
+           
+            <form action ="Register.php" method = "POST" id="register" class="input-group">
+                <h4>Please fill out section below to register</h4>
+                <input type= "text"  name = "username" class="input-field" placeholder="Enter User Name" required> <!-- Create a user pass  required-->
+                
+                <input type= "password"  name = "password" class="input-field" placeholder="Enter Password" required> <!-- Create a user pass  required-->
+                
+               
+                <input type= "text"   name = "useremail" class="input-field" placeholder="Enter Email" required>
+
+             
+
+               
+                    <br>
+                    <label for="Role">Role:</label>
+                    <select  type="text" name="role" id="role">
+                        
+                        
+                            <option value="Support">Support Admin</option>
+                            <option value="Finance">Finance Admin</option>
+                            <option value="Sales">Sales Admin</option>
+                            <option value="HR">HR Admin</option>
+                            <option value= "Tech"> Tech Admin</option>
+                          </select>
+                      
+              <br>
+               
+                <input type="submit" class = "submit-btn" value = "Register">
+
+            </form>
+            
+
+        </div>
+        
+    </div>
+</body>
+
+
+
+
+<script>
+    /* to make the login/ register on top switch ( toggle ) when we click on it */
+    var x = document.getElementById("login"); 
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+
+    function register()
+    {
+        y.style.top="100px";
+        x.style.left= "-400px";
+        y.style.left= "50px";
+        z.style.left= "110px";
+    }
+
+    function login()
+    {
+        x.style.left= "50px";
+        y.style.left= "450px";
+        z.style.left= "0px";
+    }
+</script>
+
+
+
+
+
+<style>
+    body {
+      background-image: url('Login.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    </style>
+
+</html>
+
